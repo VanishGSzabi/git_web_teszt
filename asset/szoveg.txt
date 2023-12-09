@@ -1,0 +1,4 @@
+I. Mi az a git?
+A git az egy ingyenes, nyílt forráskódú verziókezelő szoftver, amely egy fájlállomány összes változását nyomon követi. A mentett verziókat vissza lehet hívni, és onnan folytatni a munkát. Amíg a git csak helyi verziókezelési feladatokat lát el, hatékonyságát tovább lehet növelni távoli elérésű tárolókkal mint a Github.
+
+II. Miért jó a git?

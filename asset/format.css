@@ -1,0 +1,30 @@
+body{
+    background-image: url(background.jpg);
+}
+
+#fejlec{
+    height: 200px;
+    width: 100%;
+}
+
+#cim{
+    margin: auto;
+    margin-top: 20px;
+    height: 40%;
+    width: 40%;
+    background-color: white;
+
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+}
+
+/*  */
+
+#keret{
+    background-color: white;
+    padding: 25px;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
