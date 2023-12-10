@@ -94,7 +94,7 @@
             <div class="col-lg-4 col-xs-12 col-sm-12">
                 <h2>Fájlok jelzése</h2>
                 <p>
-                    A <code>git add</code> paranccsal jelölni tudjuk, hogy mely mappákat, fájlokat szeretnénk verziókezelés alá rendelni. Érdemes az összes fájlt jelezni az állományunkban a <code>git add *</code> paranccsal, de egyenként is tudunk jelezni fájlokat, például:<br>
+                    A <code>git add</code> paranccsal jelölni tudjuk, hogy mely mappákat, fájlokat szeretnénk verziókezelés alá rendelni. Érdemes az összes fájlt jelezni az állományunkban a <code>git add *.*</code> paranccsal, de egyenként is tudunk jelezni fájlokat, például:<br>
                     <ul>
                         <li>csak egy adott fájlt: <code>git add index.html</code> - csak az index.html fájl lesz jelezve.</li>
                         <li>az összes megadott kiterjesztésű fájl: <code>git add *.png</code> - minden png fájl jelezve lesz.</li>
@@ -121,7 +121,7 @@
                 <p>
                     A <code>git reset</code> paranccsal vissza tudjuk vonni a megadott állományok jelzését, így nem lesznek tárolva.
                     <ul>
-                        <li>csak egy adott fájlt: <code>index.html</code></li>
+                        <li>csak egy adott fájlt: <code>git reset index.html</code></li>
                         <li>az összes megadott kiterjesztésű fájl: <code>git reset *.png</code></li>
                         <li>az összes fájl amelyben a ? előtti vagy utáni karakterek következnek: <code>git reset ?_template.*</code> </li>
                         <li>egy mappa és azon belüli összes fájl jelzésének visszavonása: <code>git reset asset\bootstrap</code></li>
