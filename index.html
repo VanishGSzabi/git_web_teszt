@@ -154,7 +154,7 @@
                     A <code>git show</code> paranccsal meg lehet tekinteni egy commit és az azelőtti commit közötti különbséget. <br>
                     <ul>
                         <li>Ha a legfrisebb commit és az azelőtti között: <code>git show HEAD</code></li>
-                        <li>Egy kiválasztott commit és az azelőtti között: <code>git show commit_azonositoszama</code></li>
+                        <li>Egy kiválasztott commit és az azelőtti között: <code>git show commit_azonositoszam</code></li>
                     </ul>
                 </p>
             </div>
@@ -168,6 +168,10 @@
 
         </div>
 
+        <p>
+            <b>Commit-ok tömeges törlése: </b><code>git reset --hard commit_azonositoszam</code> - az összes commit a megadott után törölve lesz.
+        </p>
+
         <p id="spacing"></p>
 
 <!-- 5. sor -->
@@ -175,21 +179,41 @@
             <h1 id="dolgozoszoba">"Dolgozószobák"</h1>
 
             <div class="col-lg-4 col-xs-12 col-sm-12">
-                <h2></h2>
+                <h2>Új dolgozószoba</h2>
+                <p>
+                    Alapértelmezetten a "master" nevű szobában dolgozik a git, de megadhatunk saját szobákat is és ott külön dolgozni (pl. in_progress, experimenting, stb). Ezeket a <code>git branch</code> paranccsal tudjuk kezelni. Az új szoba a master szoba másolata lesz készítéskor. Ha az új szobát töröljük bármennyi módosítással is, mivel nem a master szobában dolgoztuk és nem olvasztottuk őket egymásba, ezért a master szoba érintetlen lesz.
+                </p>
+                <ul>
+                    <li>Új szoba készítéséhez: <code>git branch szobanev</code></li>
+                    <li>Szoba törléséhez: <code>git branch -D szobanev</code></li>
+                </ul>
             </div>
 
             <div class="col-lg-4 col-xs-12 col-sm-12">
-                <h2></h2>
+                <h2>Szobák közötti mozgás</h2>
+                <p>
+                    A szobák küzütti mozgást a <code>git checkout</code> paranccsal tudjuk megtenni. Miután átléptünk, a módosításaink az átlépett szobába lesznek kezelve.
+                </p>
             </div>
 
             <div class="col-lg-4 col-xs-12 col-sm-12">
-                <h2></h2>
+                <h2>Szobák összeolvasztása</h2>
+                <p>
+                    Miután átléptünk a cél szobába, a <code>git merge</code> paranccsal egy megadott szoba módosításait át tudjuk helyezni abba, amiben jelenleg vagyunk.
+                </p>
             </div>
 
         </div>
 
+        <p id="spacing"></p>
+
     </div>
 <div>
+</section>
+
+<section id="lablec">
+    <h5>Készítette: Galambos Szabolcs</h5>
+    <a href="https://git-scm.com/" target="_blank">A git weboldala</a>
 </section>
 
 </body>

@@ -2,6 +2,22 @@ body{
     background-image: url(background.jpg);
 }
 
+#cim{
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    height: 40%;
+    width: 40%;
+    background-color: white;
+
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.list-group{
+    margin-bottom: 20px;
+}
+
 a,a:active,a:link,a:hover,a:visited{
     text-decoration: none;
 }
@@ -9,18 +25,6 @@ a,a:active,a:link,a:hover,a:visited{
 #fejlec{
     height: 200px;
     width: 100%;
-}
-
-#cim{
-    margin: auto;
-    margin-top: 20px;
-    height: 40%;
-    width: 40%;
-    background-color: white;
-
-    text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding: 10px;
 }
 
 /*  */
@@ -40,6 +44,13 @@ h1{
     height: 20px;
 }
 
-.list-group{
-    margin-bottom: 20px;
+/* */
+
+#lablec{
+    margin-top: 20px;
+    width: 100vw;
+    padding: 15px;
+    background-color: white;
+
+    text-align: center;
 }
