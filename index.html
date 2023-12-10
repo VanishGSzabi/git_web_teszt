@@ -76,7 +76,7 @@
             <div class="col-lg-5 col-xs-12 col-sm-12">
                 <h2>Projekt kezdése</h2>
                 <p>
-                    Készítsünk egy mappát a projektnek és nyissunk ott meg egy parancssort: <b>shift+jobb click -> Paranccsor megnyitása itt</b>. Powershell ablak esetén írjuk be, hogy <code>cmd</code>, és onnan folytassuk a munkát.
+                    Készítsünk egy mappát a projektnek és nyissunk ott meg egy parancssort: <b>shift+jobb click -> Parancssor megnyitása itt</b>. Powershell ablak esetén írjuk be, hogy <code>cmd</code>, és onnan folytassuk a munkát.
                 </p>
                 <p>
                     A <code>git init</code> paranccsal készítsük fel az állományt verziókezelésre.
@@ -138,15 +138,32 @@
             <h1 id="kulonbsegek">Különbségek megtekintése</h1>
 
             <div class="col-lg-4 col-xs-12 col-sm-12">
-                <h2></h2>
+                <h2>Különbségek állományban</h2>
+                <p>
+                    Megtekinthetőek a változtatások a verziótárolt állomány és a jelenlegi között a <code>git diff</code> paranccsal.<br>
+                    <ul>
+                        <li>Ha egy állomány változásait akarjuk megtekinteni: <code>git diff index.html</code></li>
+                        <li>Ha az összes módosítást akarjuk megtekinteni <code>git diff HEAD</code></li>
+                    </ul>
+                </p>
             </div>
 
             <div class="col-lg-4 col-xs-12 col-sm-12">
-                <h2></h2>
+                <h2>Tárolt verziók közötti különbség</h2>
+                <p>
+                    A <code>git show</code> paranccsal meg lehet tekinteni egy commit és az azelőtti commit közötti különbséget. <br>
+                    <ul>
+                        <li>Ha a legfrisebb commit és az azelőtti között: <code>git show HEAD</code></li>
+                        <li>Egy kiválasztott commit és az azelőtti között: <code>git show commit_azonositoszama</code></li>
+                    </ul>
+                </p>
             </div>
 
             <div class="col-lg-4 col-xs-12 col-sm-12">
-                <h2></h2>
+                <h2>Grafikus felület</h2>
+                <p>
+                    A parancssoros munka helyett elérhető egy GUI amiben kicsit szofisztikáltabban lehet megtekinteni az teljes állományunk összes verzióját. Ehez a <code>gitk</code> parancs kell.
+                </p>
             </div>
 
         </div>
@@ -158,14 +175,7 @@
             <h1 id="dolgozoszoba">"Dolgozószobák"</h1>
 
             <div class="col-lg-4 col-xs-12 col-sm-12">
-                <h2>Különbségek állományban</h2>
-                <p>
-                    Megtekinthetőek a változtatások a verziótárolt állomány és a jelenlegi között a <code>git diff</code> paranccsal.<br>
-                    <ul>
-                        <li>Ha egy állomány változásait akarjuk megtekinteni: <code>git diff index.html</code></li>
-                        <li>Ha az összes módosítást akarjuk megtekinteni <code>git diff HEAD</code></li>
-                    </ul>
-                </p>
+                <h2></h2>
             </div>
 
             <div class="col-lg-4 col-xs-12 col-sm-12">
