@@ -1,5 +1,14 @@
+@font-face {
+    font-family: consolefont;
+    src: url(lucon.ttf);
+  }
+
 body{
     background-image: url(background.jpg);
+}
+
+a,a:active,a:link,a:hover,a:visited{
+    text-decoration: none;
 }
 
 #fejlec{
@@ -27,4 +36,8 @@ body{
     position: relative;
     width: 100vw;
     height: 100vh;
+}
+
+.card-body{
+    font-family: consolefont;
 }
