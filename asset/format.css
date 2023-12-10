@@ -35,3 +35,11 @@ a,a:active,a:link,a:hover,a:visited{
 h1{
     font-weight: bold;
 }
+
+#spacing{
+    height: 20px;
+}
+
+.list-group{
+    margin-bottom: 20px;
+}
