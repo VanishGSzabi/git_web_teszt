@@ -7,7 +7,180 @@
     <link rel="stylesheet" href="asset/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="asset/format.css">
 </head>
-<body>
-    
+
+<body>  
+
+<section id="fejlec"> <!-- lap fejlec -->
+        <div id="cim">
+            <h1>Git összefoglaló</h1>
+        </div>
+</section>
+
+<section> <!-- lap keret -->
+<div id="keret">
+    <div class="container">
+
+<!-- 1. sor -->
+        <div class="row">
+
+            <div class="col-lg-4 col-xs-12 col-sm-12">
+
+                <ul class="list-group">
+                    <li class="list-group-item active" aria-current="true"><h3>Tartalomjegyzék</h3></li>
+                    <a href="#bemutato"><li class="list-group-item">I. Rövid bemutató</li></a>
+                    <a href="#beallitas"><li class="list-group-item">II. Git telepítése, beállítása és projekt kezdése</li></a>
+                    <a href="#jelzes"><li class="list-group-item">III. Jelzés, tárolás, visszavonás</li></a>
+                    <a href="#kulonbsegek"><li class="list-group-item">IV. Különbségek megtekintése</li></a>
+                    <a href="#dolgozoszoba"><li class="list-group-item">V. Dolgozószobák</li></a>
+                  </ul>  
+
+            </div>
+
+            <div class="col-lg-8 col-xs-12 col-sm-12">
+                <h1 id="bemutato">Rövid bemutató</h1>
+
+                <h2>Mi az a git?</h2>
+                <p>
+                    A git az egy ingyenes, nyílt forráskódú verziókezelő szoftver, amely egy fájlállomány összes változását nyomon követi. A mentett verziókat vissza lehet hívni, és onnan folytatni a munkát. Amíg a git csak helyi verziókezelési feladatokat lát el, hatékonyságát tovább lehet növelni távoli elérésű tárolókkal mint a Github. A szoftvert egyéni felhasználóktól multimilliós cégek is használják, egyszerű beadandóktól akár egy egész operációs rendszer fejlesztéséig használják.
+                </p>
+                <h2>Mire jó a git?</h2>
+                <p>
+                    A git használásával projektek tárolása és változásainak követése végtelenül hatékonyabb lesz. A tárolt verziókat (ha nem lettek törölve) bármikor elérhetjük, így a projekt menetét követhetjük, visszaállíthatjuk.
+                </p>
+            </div>
+
+        </div>
+
+        <p id="spacing"></p> <!-- kell hely a sorok kozott mert egybe akarnak folyni -->
+
+<!-- 2. sor -->
+        <div class="row">
+            <h1 id="beallitas">Git telepítése, beállítása és projekt kezdése</h1>
+            
+            <div class="col-lg-2 col-xs-12 col-sm-12">
+                <h2>Letöltés</h2>
+                <p>A git elérhető Windows-ra, macOS-re illetve több Linux disztribúciókra (legtöbb asztali disztroban elöre telepítve.)</p>
+                <a href="https://git-scm.com/downloads" target="_blank"><button type="button" class="btn btn-success">Git letöltése</button></a>
+            </div>
+
+            <div class="col-lg-5 col-xs-12 col-sm-12">
+                <h2>Beállítás</h2>
+                <p>A git parancsként működik a Windows cmd-ben (parancssorban). Ellenőrizhetjük a szoftver telepített verzióját a <code>git --version</code> paranccsal, illetve a <code>git --help</code> paranccsal egy grafikus súgó nyitható meg. A hatékonyság kedvéért állítsuk egy felhasználónevet és elérhetőséget a programba:<br>
+                    <ul>
+                        <li>Felasználónév beállítása: <code>git config --global user.name "nev"</code></li>
+                        <li>Elérhetőség (email cím) beállítása: <code>git config --global user.email "email@cim"</code></li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="col-lg-5 col-xs-12 col-sm-12">
+                <h2>Projekt kezdése</h2>
+                <p>
+                    Készítsünk egy mappát a projektnek és nyissunk ott meg egy parancssort: <b>shift+jobb click -> Paranccsor megnyitása itt</b>. Powershell ablak esetén írjuk be, hogy <code>cmd</code>, és onnan folytassuk a munkát.
+                </p>
+                <p>
+                    A <code>git init</code> paranccsal készítsük fel az állományt verziókezelésre.
+                </p>
+            </div>
+
+        </div>
+
+        <p id="spacing"></p>
+
+<!-- 3. sor -->
+        <div class="row">
+            <h1 id="jelzes">Jelzés, tárolás, visszavonás</h1>
+
+            <div class="col-lg-4 col-xs-12 col-sm-12">
+                <h2>Fájlok jelzése</h2>
+                <p>
+                    A <code>git add</code> paranccsal jelölni tudjuk, hogy mely mappákat, fájlokat szeretnénk verziókezelés alá rendelni. Érdemes az összes fájlt jelezni az állományunkban a <code>git add *</code> paranccsal, de egyenként is tudunk jelezni fájlokat, például:<br>
+                    <ul>
+                        <li>csak egy adott fájlt: <code>git add index.html</code> - csak az index.html fájl lesz jelezve.</li>
+                        <li>az összes megadott kiterjesztésű fájl: <code>git add *.png</code> - minden png fájl jelezve lesz.</li>
+                        <li>az összes fájl amelyben a ? előtti vagy utáni karakterek következnek: <code>git add ?_template.*</code> - az összes _template-vel végződő fájl jelezve lesz.</li>
+                        <li>egy mappa és azon belüli összes fájl jelzése: <code>git add asset\bootstrap</code> - az asset\bootstrap egész tartalma jelezve lesz.</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="col-lg-4 col-xs-12 col-sm-12">
+                <h2>Verzió tárolása</h2>
+                <p>
+                    Ha végeztünk a módosításokkal, az állományt a <code>git commit -m "megjegyzes"</code> paranccsal tudjuk verzióként tárolni. Az összes tárolt verzió megjelenítéséhez a <code>git log</code> parancsot tudjuk használni.
+                </p>
+                <p>
+                    <b>Megnézhetjük, hogy a jelzett állományból mi került módosításra a <code>git status</code> paranccsal.<br></b>
+                    Piros színnel jelennek meg az elemek nevei, ha tárolva vagy jelezve sem voltak, vagy csak módósítva lettek.<br>
+                    Zöld színnel jelennek meg az elemek nevei, ha jelezve lettek, de nincsenek tárolva.
+                </p>
+            </div>
+
+            <div class="col-lg-4 col-xs-12 col-sm-12">
+                <h2>Jelzés visszavonása</h2>
+                <p>
+                    A <code>git reset</code> paranccsal vissza tudjuk vonni a megadott állományok jelzését, így nem lesznek tárolva.
+                    <ul>
+                        <li>csak egy adott fájlt: <code>index.html</code></li>
+                        <li>az összes megadott kiterjesztésű fájl: <code>git reset *.png</code></li>
+                        <li>az összes fájl amelyben a ? előtti vagy utáni karakterek következnek: <code>git reset ?_template.*</code> </li>
+                        <li>egy mappa és azon belüli összes fájl jelzésének visszavonása: <code>git reset asset\bootstrap</code></li>
+                    </ul>
+                </p>
+            </div>
+
+        </div>
+
+        <p id="spacing"></p>
+
+<!-- 4. sor -->
+        <div class="row">
+            <h1 id="kulonbsegek">Különbségek megtekintése</h1>
+
+            <div class="col-lg-4 col-xs-12 col-sm-12">
+                <h2></h2>
+            </div>
+
+            <div class="col-lg-4 col-xs-12 col-sm-12">
+                <h2></h2>
+            </div>
+
+            <div class="col-lg-4 col-xs-12 col-sm-12">
+                <h2></h2>
+            </div>
+
+        </div>
+
+        <p id="spacing"></p>
+
+<!-- 5. sor -->
+        <div class="row">
+            <h1 id="dolgozoszoba">"Dolgozószobák"</h1>
+
+            <div class="col-lg-4 col-xs-12 col-sm-12">
+                <h2>Különbségek állományban</h2>
+                <p>
+                    Megtekinthetőek a változtatások a verziótárolt állomány és a jelenlegi között a <code>git diff</code> paranccsal.<br>
+                    <ul>
+                        <li>Ha egy állomány változásait akarjuk megtekinteni: <code>git diff index.html</code></li>
+                        <li>Ha az összes módosítást akarjuk megtekinteni <code>git diff HEAD</code></li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="col-lg-4 col-xs-12 col-sm-12">
+                <h2></h2>
+            </div>
+
+            <div class="col-lg-4 col-xs-12 col-sm-12">
+                <h2></h2>
+            </div>
+
+        </div>
+
+    </div>
+<div>
+</section>
+
 </body>
 </html>
